@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      text-align: center;
+      color: #262626;
+    }
+    .form-container {
+      background: #ffffff;
+      width: 400px;
+      margin: 30px auto;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #434343;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .submit-btn {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background-color: darkgreen;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #262626;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Tejaswini AWS Project</h2>
+  <h2>Contact Us</h2>
+
+  <div class="form-container">
+    <form method="POST" action="">
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" name="firstName" placeholder="Eg:Tejaswini" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="lastName" placeholder="Eg:Ciluveru" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email ID:</label>
+        <input type="email" name="email" placeholder="Eg:Tejaswiniciluveru@outlook.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number:</label>
+        <div style="display: flex; gap: 5px;">
+          <select name="countryCode" style="width: 35%;">
+            <option value="+1">+1 (USA)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+91">+91 (India)</option>
+          </select>
+          <input type="tel" name="phone" placeholder="Enter Phone Number" style="width: 65%;">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Message Notes:</label>
+        <textarea name="message" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <div class="footer">An AWS Project by Tejaswini Ciluveru</div>
+</body>
+</html>
