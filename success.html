@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      height: auto;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #262626;
+    }
+    #game-container {
+      margin: 30px auto;
+      width: 400px;
+      height: 300px;
+      background: #fff;
+      border: 2px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+    #target {
+      width: 40px;
+      height: 40px;
+      background: red;
+      position: absolute;
+      cursor: pointer;
+    }
+    #scoreboard {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://www.job-hunt.org/wp-content/uploads/2021/08/Formal-Job-Interview-Thank-You-Note-Samples-2.jpg" 
+       alt="Thank You Image">
+  <h2><b>Thank you for adding the details we have your info.  
+  Administrator will contact you.</b></h2>
+
+  <h3>🎮 Mini Game: Click the Moving Box!</h3>
+  <div id="game-container">
+    <div id="target"></div>
+  </div>
+
+  <div id="scoreboard">
+    <p id="score">Score: 0</p>
+  </div>
+
+  <script>
+    const target = document.getElementById('target');
+    const container = document.getElementById('game-container');
+    const scoreDisplay = document.getElementById('score');
+
+    let score = 0;
+
+    function moveTarget() {
+      const x = Math.random() * (container.clientWidth - target.offsetWidth);
+      const y = Math.random() * (container.clientHeight - target.offsetHeight);
+      target.style.left = x + 'px';
+      target.style.top = y + 'px';
+    }
+
+    target.addEventListener('click', () => {
+      score++;
+      scoreDisplay.innerText = "Score: " + score;
+      moveTarget();
+    });
+
+    // Move every 1.5 seconds
+    setInterval(moveTarget, 1500);
+
+    // Start the game
+    moveTarget();
+  </script>
+</body>
+</html>
